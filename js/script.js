@@ -1,15 +1,15 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 
-const jump = () -> {
+const jump = () => {
     mario.classList.add('jump');
 
-    setTimeout(() -> {
+    setTimeout(() => {
         mario.classList.remove('jump');
     }, 500);
 }
 
-const loop = setInterval(() -> {
+const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
